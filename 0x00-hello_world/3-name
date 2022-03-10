@@ -1,0 +1,2 @@
+#!/binbash
+export CFILE=3-main;gcc -o cisfun  $CFILE
