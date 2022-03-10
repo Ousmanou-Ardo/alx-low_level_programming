@@ -1,7 +1,7 @@
 #include<stdio.h>
 /**
  * main - fuction is the entry point of the program,here we are
-(* a blank line 
+(* a blank line here is the that you are lokking for
  * Description: Longer description of the function)?
 (* section header: Section description)*
  * Return: Description of the returned value
