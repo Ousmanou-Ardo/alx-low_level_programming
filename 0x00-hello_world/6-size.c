@@ -1,8 +1,9 @@
 #include<stdio.h>
+/*this a description of a min */
 int main(void)
 {
 /* sizeof evaluates the size of a vari */
-printf("Size of char: %zu byte(s)\n", sizeof(char));
+printf("Size of a char: %zu byte(s)\n", sizeof(char));
 printf("Size of an int: %zu byte(s)\n", sizeof(int));
 printf("Size of a long int: %zu byte(s)\n", sizeof(long int));
 printf("Size of a long long:%zu byte(s)\n", sizeof(long long int));
