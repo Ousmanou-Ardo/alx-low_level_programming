@@ -1,6 +1,6 @@
 #include<stdio.h>
-/*
-* the main fuction is the entry point of the program 
+/***
+*the main fuction is the entry point of the program 
 */
 int main(void)
 {
