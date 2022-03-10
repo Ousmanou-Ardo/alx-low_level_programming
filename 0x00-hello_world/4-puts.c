@@ -1,7 +1,8 @@
 #include<stdio.h>
 /**
- *gere us sirt
- *this a main function that will print
+ * @main:entry point function
+ * gere us sirt
+ * this a main function that will print
  */
 int main(void)
 {
