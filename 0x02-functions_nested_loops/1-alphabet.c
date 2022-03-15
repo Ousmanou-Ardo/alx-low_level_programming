@@ -7,7 +7,7 @@ include "main.h"
  */
 void print_alphabet(void)
 {
-char al =v'a';
+char al = 'a';
  
 while (al <= 'z')
 {
