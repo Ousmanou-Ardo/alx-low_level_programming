@@ -1,7 +1,6 @@
 #include "main.h"
 /**
- * times_table - echoe the numbers m 0 - 9. 
-(* biba
+ * times_table - echoe the numbers.
  * Return: Nothing.
  */
 void times_table(void)
