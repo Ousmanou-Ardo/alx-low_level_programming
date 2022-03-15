@@ -12,12 +12,13 @@ int i = 0;
 
 while (i <= 9)
 {
-while (c <=  'z')
-{
-_putchar(c);
-c++;
-}
+  while (c <=  'z')
+    {
+      _putchar(c);
+      c++;
+    }
 i++;
-}
+
 _putchar('\n');
+}
 }
