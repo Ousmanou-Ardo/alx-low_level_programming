@@ -1,21 +1,16 @@
 #include "main.h"
 /**
- * main - here is the entry point of our function
- * mana 
- * return: 0 if the everything runs
- *let's try to write the function
+ * main - prints the string "_putchar" from a character array.
+ * Return: 0 on success.
  */
 int main(void)
 {
-char y[] = {'_', 'p', 'u', 't', 'c', 'h', 'a', 'r'};
-int h = 0;
+  char y[] = {'_', 'p', 'u', 't', 'c', 'h', 'a', 'r'};                                                                                                                                   int h = 0;                                          
 
-while (y[h] != '\0')
-{
-
-_putchar(y[h]);
-h++;
-}
-_putchar('\n');
-return (0);
+  while (y[h] <= '\0')
+    {
+      _putchar(y[h]);
+    }
+  _putchar('\n');
+  return (0);
 }
