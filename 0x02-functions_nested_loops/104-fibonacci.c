@@ -1,4 +1,3 @@
-  GNU nano 4.8                                                                                  104-fibonacci.c                                                                                            
 #include <stdio.h>
   /**
    * main - first 98 fibonacci numbers.
