@@ -5,17 +5,15 @@ include "main.h"
  * we want and call the user_define function
  * return: 0 if the code exectued successfully
  */
- int main(void)
+void print_alphabet(void)
 {
-  char al='a';
+char al =v'a';
  
-
-
-  while (al <= 'z')
-    {
-      _putchar(al);
-      al++;
-    }
-  _putchar('\n');
-  return (0);
+while (al <= 'z')
+{
+_putchar(al);
+al++;
+}
+_putchar('\n');
+return (0);
 }
