@@ -2,10 +2,13 @@
 /**
  * times_table - echoe the numbers m 0 - 9. 
 (* biba
- * Return: Nothing. 
-*/
+ * Return: Nothing.
+ */
 void times_table(void)
-{ int k, j, res;
+{
+int k, j, res;
+
+
 for (k = 0; k <= 9; k++)
 {
 for (j = 0; j <= 9; j++)
