@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 /**
  * print_numbers - output digits from 1-9
  * here the is no return.
