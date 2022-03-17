@@ -20,22 +20,12 @@ Prints a series of backslashes to the standard output on separate lines that whe
 <h6>8-print_square.c</h6>
 Prints a square made out of hashes to the standard output.
 <h6>9-fizz_buzz.c</h6>
-Prints the numbers 1-100 to the standard output. Whenever a multiple of 3 is encountered, prints Fizz. Whenever a multiple of 5 is encountered, prints Buzz. If a multiple of both 3 and 5 is encountered, prints FizzBuzz.
+Prints the numbers 1-100 to the standard output. Whenever a multiple of 3 is encountered, prints Fizz. Whenever a multiple of 5 is encountered, prints .
 <h6>10-print_triangle.c</h6>
 Prints a triangle to the standard output. Looks like this, if the input is 10:<br>
-```
-         #
-        ##
-       ###
-      ####
-     #####
-    ######
-   #######
-  ########
- #########
-##########
+#######
 ```
 <h6>100-prime_factor.c</h6>
-Finds and prints the largest prime factor of the number 612852475143 followed by a new line.
+Finds and prints the largest prime factor of the number  followed by a new line.
 <h6>101-print_number.c</h6>
 Prints an integer, accepts an integer.
