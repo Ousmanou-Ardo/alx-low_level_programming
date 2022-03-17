@@ -6,7 +6,7 @@
 int main(void)
 {
         int i;
-
+         /* this prints the infinit loop */
         printf("Infinite loop incoming :(\n");
 
         i = 0;
