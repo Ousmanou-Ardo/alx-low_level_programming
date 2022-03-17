@@ -1,8 +1,4 @@
-#Holberton School - 0x03-more_functions_nested_loops
-More advanced assignments to learn functions and nested loops
-## New commands / functions used:
-``isupper``, ``isdigit``
-## Helpful Links
+
 
 ## Description of Files
 <h6>0-isupper.c</h6>
