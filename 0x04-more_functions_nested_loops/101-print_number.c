@@ -6,7 +6,7 @@
 
 void print_number(int n)
 {
-long len, papi, i, tamporizer, exposant;
+int len, papi, i, tamporizer, exposant;
 
 papi = n;
 exposant = len =  1;
