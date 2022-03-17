@@ -26,8 +26,8 @@ tamporizer /= 10;
 }
 
 /*exposant*/
-	for (i = 1; i < len; i++)
-		exposant *= 10;
+for (i = 1; i < len; i++)
+exposant *= 10;
 /*main */
 while (exposant > 1)
 {
