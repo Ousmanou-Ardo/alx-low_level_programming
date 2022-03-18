@@ -1,27 +1,38 @@
 #include "main.h"
 /**
- * print_triangle - Prints a triangle, using the character #.
- * @size: The size of the triangle.
+ * print_number - prints an  integer
+ * @n: the variable  number
  */
-void print_triangle(int size)
+
+void print_number(int n)
 {
-int hash, index;
+int len, papi, i, tamporizer, exposant;
 
-if (size > 0)
+papi = n;
+exposant = len =  1;
+/*see if the number is negatives*/
+if (papi < 0)
 {
-for (hash = 1; hash <= size; hash++)
-{
-for (index = size - hash; index > 0; index--)
-_putchar(' ');
-
-for (index = 0; index < hash; index++)
-_putchar('#');
-
-if (hash == size)
-continue;
-
-_putchar('\n');
+papi *= -1;
+_putchar('-');
 }
+
+/* yes here we are*/
+tamporizer = papi;
+while (tamporizer >= 10)
+{
+len++;
+tamporizer /= 10;
 }
-_putchar('\n');
+
+/*exposant*/
+for (i = 1; i < len; i++)
+exposant *= 10;
+/*main*/
+while (exposant > 1)
+{
+_putchar((papi / exposant) % 10 + '0');
+exposant /= 10;
+}
+_putchar(papi % 10 + '0');
 }
