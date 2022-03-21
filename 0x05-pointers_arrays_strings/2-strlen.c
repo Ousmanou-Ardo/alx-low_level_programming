@@ -12,5 +12,5 @@ while (*str != '\0')
 e++;
 str++;
 }
-return (i);
+return (e);
 }
