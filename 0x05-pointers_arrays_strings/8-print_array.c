@@ -18,5 +18,5 @@ else
 printf("%d", a[i]);
 i++;
 }
-putchar('\n');
+_putchar('\n');
 }
