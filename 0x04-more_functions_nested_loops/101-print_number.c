@@ -1,38 +1,21 @@
 #include "main.h"
-/**
- * print_number - prints an  integer
- * @n: the variable  number
- */
 
+/**
+ * print_number - Prints an integer.
+ * @n: The integer to be printed.
+ */
 void print_number(int n)
 {
-int len, papi, i, tamporizer, exposant;
+unsigned int num = n;
 
-papi = n;
-exposant = len =  1;
-/*see if the number is negatives*/
-if (papi < 0)
+if (n < 0)
 {
-papi *= -1;
 _putchar('-');
+num = -num;
 }
 
-/* yes here we are*/
-tamporizer = papi;
-while (tamporizer >= 10)
-{
-len++;
-tamporizer /= 10;
-}
+if ((num / 10) > 0)
+print_number(num / 10);
 
-/*exposant*/
-for (i = 1; i < len; i++)
-exposant *= 10;
-/*main */
-while (exposant > 1)
-{
-_putchar((papi / exposant) % 10 + '0');
-exposant /= 10;
-}
-_putchar(papi % 10 + '0');
+_putchar((num % 10) + '0');
 }

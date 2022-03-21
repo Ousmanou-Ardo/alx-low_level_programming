@@ -1,17 +1,38 @@
-#include <stdio.h>
+#include "main.h"
 /**
- * main -  output the larget prime factor of 612852475143
- * Return:nothing when success.
+ * print_number - prints an  integer
+ * @n: the variable  number
  */
-int main(void)
+
+void print_number(int n)
 {
-long i;
-long num = 612852475143;
-for (i = 2; i < num; i++)
+int len, papi, i, tamporizer, exposant;
+
+papi = n;
+exposant = len =  1;
+/*see if the number is negatives*/
+if (papi < 0)
 {
-if (num % i == 0)
-num /= i;
+papi *= -1;
+_putchar('-');
 }
-printf("%li\n", num);
-return (0);
+
+/* yes here we are*/
+tamporizer = papi;
+while (tamporizer >= 10)
+{
+len++;
+tamporizer /= 10;
+}
+
+/*exposant*/
+for (i = 1; i < len; i++)
+exposant *= 10;
+/*main*/
+while (exposant > 1)
+{
+_putchar((papi / exposant) % 10 + '0');
+exposant /= 10;
+}
+_putchar(papi % 10 + '0');
 }
