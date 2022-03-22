@@ -1,28 +1,34 @@
-#import "main.h"
-/**
- * main - entry point of the function
- *
- * @ac: Arguments counter
- * @av: Arguments array
- * Return: 1 on error, 0 otherwise
- */
-int main(int ac, char **av)
-{
-	unsigned long int c;
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
-	if (ac != 2)
+/**
+ * main -  generates random password
+ *
+ * Return: return 0 if successfull
+ */
+int main(void)
+{
+	int pass[100];
+	int i, sum, n;
+
+	sum = 0;
+
+	srand(time(NULL));
+
+	for (i = 0; i < 100; i++)
 	{
-		printf("Usage: %s password\n", av[0]);
-		return (1);
+		pass[i] = rand() % 78;
+		sum += (pass[i] + '0');
+		putchar(pass[i] + '0');
+		if ((2772 - sum) - '0' < 78)
+		{
+			n = 2772 - sum - '0';
+			sum += n;
+			putchar(n + '0');
+			break;
+		}
 	}
-	c = checksum(av[1]);
-	/* printf("%lu\n", c); */
-	/* "Talk is cheap. Show me the code." */
-	if (c != 2772)
-	{
-		printf("Wrong password\n");
-		return (1);
-	}
-	printf("Tada! Congrats\n");
+
 	return (0);
 }
