@@ -11,9 +11,9 @@ int i;
 i = 0;
 for (; i < n; i++)
 {
-printf("%d", a[i]);
+printf("%d", *(a+i));
 if (i != (n - 1))
 printf(", ");
 }
-printf('\n');
+printf("\n");
 }
