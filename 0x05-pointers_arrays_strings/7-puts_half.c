@@ -3,20 +3,21 @@
  * puts_half - outputing the first half of a string.
  * @str: input string to output.
  */
+ 
 void puts_half(char *str)
 {
-int i, j;
+int i = 0;
+int n = 0;
 
 while (str[i] != '\0')
-i++;
-if (i % 2 == 0)
-j = i / 2;
-else
-j = (i + 1) / 2;
-while (j < i)
-{
-_putchar(str[j]);
-j++;
+i += 1;
+n = i / 2;
+if (i % 2 == 1)
+n += 1;
+while (str[n] != '\0')
+ {
+ _putchar(*(str + n));
+n++;
 }
-_putchar('\n');
+ _putchar('\n');
 }
