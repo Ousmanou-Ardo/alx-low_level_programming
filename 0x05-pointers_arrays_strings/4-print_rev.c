@@ -1,19 +1,20 @@
 #include "main.h"
+
 /**
- * print_rev - output string, then a new line.
- * @s: the input variable.
+ * print_rev - a function that prints a string, in reverse,
+ * followed by a new line.
+ * @s: an input string
+ * Return: Nothing
  */
-void print_rev(char *s)                                                                                                                             
-{                                                                                                                                                   
-        int i = 0;                                                                                                                                  
-                                                                                                                                                    
-        while (*(s + i) != '\0')                                                                                                                    
-                i += 1;                                                                                                                             
-        i -= 1;                                                                                                                                     
-        while (i >= 0)                                                                                                                              
-        {                                                                                                                                           
-                _putchar(*(s + i));                                                                                                                 
-                i--;                                                                                                                                
-        }                                                                                                                                           
-        _putchar('\n');                                                                                                                             
+void print_rev(char *s)
+{
+	int len = 0;
+
+	while (s[len] != '\0')
+		len++;
+
+	while (len)
+		_putchar(s[--len]);
+
+	_putchar('\n');
 }
