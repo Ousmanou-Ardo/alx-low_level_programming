@@ -1,13 +1,13 @@
 /**
- * leet - encod aer of string into leetspeek.
- * @s: pointing to input string.
- * Return: Returning pointer to leetspeek string.
+ * leet - encodinginto leetspeek.
+ * @s: pointing string.
+ * Return: Returning leetspeek string.
  */
 char *leet(char *s)
 {
 	int i, k;
 	char subs[] = "aAeEoOtTlL";
-	char le[] = "1337";
+	char le[] = "43071";
 
 	i = 0;
 	for (i = 0; s[i] != '\0'; i++)
