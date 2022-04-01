@@ -3,20 +3,22 @@
 #include <stdlib.h>
 #include <string.h>
 /**
- * checker - checking valid input
- * @argc: count's argument
- * @i: counter's argv[]
- * @j: counter's  argv[][]
- * @argv: vector's
- * Return: 0 if success, 1 when failure
+ * is_valid_int - checks if a string is a valid integer
+ * @s: string
+ *
+ * Return: 1 is s is a valid integer. 0 otherwise
  */
-int checker(int argc, int i, unsigned int j, char **argv[])
+int is_valid_int(char *s)
 {
-	for (i = 1; i <= argc; i++)
-		for (j = 0; argv[i] != '\0' && j < strlen(argv[i]); j++)
-			if (isdigit(argv[i][j]) == 0)
-				return (1);
-	return (0);
+	while (*s)
+	{
+		if (*s < '0' || *s > '9')
+			return (0);
+
+		s++;
+	}
+
+	return (1);
 }
 /**
  * main - adding all arguments together if they are digits.
@@ -24,19 +26,37 @@ int checker(int argc, int i, unsigned int j, char **argv[])
  * @argv: argument vector
  * Return: 0 on success, 1 on failure
  */
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-	int result, i;
+	int i;
+	int total = 0;
 
-	result = 0;
-	if (checker(argc, 1, 0, argv) == 1)
+	/* if no other arguments are passed */
+	if (argc < 2)
 	{
-		printf("Error\n");
-		return (1);
+		printf("%d\n", 0);
+		return (0);
 	}
+
 	for (i = 1; i < argc; i++)
-		result += atoi(argv[i]);
-	printf("%d\n", result);
+	{
+		/* check if the argument is a valid integer */
+		if (is_valid_int(argv[i]))
+		{
+			total += atoi(argv[i]);
+		}
+		else
+		{
+			printf("Error\n");
+			return (1);
+		}
+	}
+
+	printf("%d\n", total);
+
 	return (0);
 }
+
+
+
 
