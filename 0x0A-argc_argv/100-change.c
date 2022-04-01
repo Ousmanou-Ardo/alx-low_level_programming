@@ -29,31 +29,42 @@ int is_valid_int(char *s)
  */
 int main(int argc, char *argv[])
 {
-	unsigned int cents;
-	int coins, i;
+	int cents, coins = 0;
 
-	cents = coins = 0;
-	if (argc == 2)
+	if (argc != 2)
 	{
-		if (argv[1][0] == '-')
-			printf("0\n");
-		if (is_valid_int(argv[i]))
-		{
-			cents = atoi(argv[1]);
-			for ( ; cents >= 25; coins++, cents -= 25)
-				;
-			for ( ; cents >= 10; coins++, cents -= 10)
-				;
-			for ( ; cents >= 5; coins++, cents -= 5)
-				;
-			for ( ; cents >= 2; coins++, cents -= 2)
-				;
-			for ( ; cents >= 1; coins++, cents--)
-				;
-			printf("%d\n", coins);
-		}
-	}
-	else
 		printf("Error\n");
+		return (1);
+	}
+
+	cents = atoi(argv[1]);
+
+	while (cents > 0)
+	{
+		coins++;
+		if ((cents - 25) >= 0)
+		{
+			cents -= 25;
+			continue;
+		}
+		if ((cents - 10) >= 0)
+		{
+			cents -= 10;
+			continue;
+		}
+		if ((cents - 5) >= 0)
+		{
+			cents -= 5;
+			continue;
+		}
+		if ((cents - 2) >= 0)
+		{
+			cents -= 2;
+			continue;
+		}
+		cents--;
+	}
+
+	printf("%d\n", coins);
 	return (0);
 }
