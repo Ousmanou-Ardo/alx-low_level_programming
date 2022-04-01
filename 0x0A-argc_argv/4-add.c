@@ -10,7 +10,7 @@
  * @argv: vector's
  * Return: 0 if success, 1 when failure
  */
-int checker(int argc, int i, unsigned int j, char *argv[])
+int checker(int argc, int i, unsigned int j, char **argv[])
 {
 	for (i = 1; i <= argc; i++)
 		for (j = 0; argv[i] != '\0' && j < strlen(argv[i]); j++)
@@ -39,3 +39,4 @@ int main(int argc, char *argv[])
 	printf("%d\n", result);
 	return (0);
 }
+
