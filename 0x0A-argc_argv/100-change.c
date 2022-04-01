@@ -3,20 +3,22 @@
 #include <stdlib.h>
 #include <string.h>
 /**
- * checker - checking  valid input
- * @argc: count's argument
- * @i: counter's argv[]
- * @j: counter's  argv[][]
- * @argv: vector's argument
- * Return: 0 if success, 1 else failure
+ * is_valid_int - checks if a string is a valid integer
+ * @s: string
+ *
+ * Return: 1 is s is a valid integer. 0 otherwise
  */
-int checker(int argc, int i, unsigned int j, char *argv[])
+int is_valid_int(char *s)
 {
-	for (i = 1; i <= argc; i++)
-		for (j = 0; argv[i] != '\0' && j < strlen(argv[i]); j++)
-			if (isdigit(argv[i][j]) == 0)
-				return (1);
-	return (0);
+	while (*s)
+	{
+		if (*s < '0' || *s > '9')
+			return (0);
+
+		s++;
+	}
+
+	return (1);
 }
 /**
  * main - output minimum number of coins
@@ -28,14 +30,14 @@ int checker(int argc, int i, unsigned int j, char *argv[])
 int main(int argc, char *argv[])
 {
 	unsigned int cents;
-	int coins;
+	int coins, i;
 
 	cents = coins = 0;
 	if (argc == 2)
 	{
 		if (argv[1][0] == '-')
 			printf("0\n");
-		if (checker(argc, 1, 0, argv) == 0)
+		if (is_valid_int(argv[i]))
 		{
 			cents = atoi(argv[1]);
 			for ( ; cents >= 25; coins++, cents -= 25)
