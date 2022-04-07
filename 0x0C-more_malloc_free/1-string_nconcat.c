@@ -4,7 +4,7 @@
  * string_nconcat - concatenation of two strings up to n bytes.
  * @s1: string's source
  * @s2: string to truncate up to n bytes
- * @n: bytes' number to truncate
+ * @n: bytes number to truncate
  * Return: buffer's new pointer
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
