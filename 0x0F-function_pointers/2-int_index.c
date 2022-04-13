@@ -3,7 +3,7 @@
 /**
   * int_index - searching  an integer
   * @array: pointer to the array
-  * @size: size of the array
+  * @size: size of the array 
   * @cmp: pointer to the function
   * Return: index of the first element found
   */
