@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
-  * insert_dnodeint_at_index - inserts a node at an index
+  * insert_dnodeint_at_index - inserting a node at an index
   * @h: double pointer to a linked list
   * @idx: where to add the node
   * @n: value of the node
